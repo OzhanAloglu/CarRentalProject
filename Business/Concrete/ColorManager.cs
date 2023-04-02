@@ -23,9 +23,19 @@ namespace Business.Concrete
             _colorDal.Add(color);
         }
 
+        public void Delete(Color color)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Color> GetCarsByColorId(int id)
         {
             return _colorDal.GetAll(x=>x.Id==id);
+        }
+
+        public void Update(Color color)
+        {
+            throw new NotImplementedException();
         }
     }
 }

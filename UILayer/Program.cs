@@ -14,9 +14,24 @@ class Program
     {
         CarManager carManager = new CarManager(new EfCarDal());
 
-        foreach (var item in carManager.GetAll())
+        var result = carManager.GetCarDetails();
+
+        if (result.Success==true)
         {
-            Console.WriteLine(item.Description);
+
+            foreach (var item in result.Data)
+            {
+                Console.WriteLine(item.CarName+" : "+item.BrandName+" : "+item.ColorName+" : "+item.DailyPrice);
+            }
+        
         }
+
+        else
+        {
+            Console.WriteLine(result.Message);
+        }
+        
+
+      
     }
 }

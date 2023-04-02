@@ -23,9 +23,19 @@ namespace Business.Concrete
             _brandDal.Add(brand);
         }
 
+        public void Delete(Brand brand)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Brand> GetCarsByBrandId(int id)
         {
             return _brandDal.GetAll(b=>b.Id == id);
+        }
+
+        public void Update(Brand brand)
+        {
+            throw new NotImplementedException();
         }
     }
 }
