@@ -39,6 +39,12 @@ namespace Business.Concrete
             return new Result(true,Messages.CarDeleted);
         }
 
+        public IResult Update(Car car)
+        {
+            _cardal.Update(car);
+            return new Result(true, Messages.CarUpdated);
+        }
+
         public IDataResult<List<Car>> GetAll()
         {
             if (DateTime.Now.Hour==22)
@@ -66,10 +72,6 @@ namespace Business.Concrete
             return new SuccessDataResult<List<CarDetailDto>>(_cardal.GetCarDetails());
         }
 
-        public IResult Update(Car car)
-        {
-            _cardal.Update(car);
-            return new Result(true,Messages.CarUpdated);
-        }
+       
     }
 }

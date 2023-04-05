@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
-    public class ICustomerManager : ICustomerService
+    public class CustomerManager : ICustomerService
     {
         ICustomerDal _customerDal;
 
-        public ICustomerManager(ICustomerDal customerDal)
+        public CustomerManager(ICustomerDal customerDal)
         {
             _customerDal = customerDal;
         }
